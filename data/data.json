@@ -1,14 +1,14 @@
 [
   {
-    "title": "Avengers",
-    "genre": "Action"
+    "id": 1764524685530,
+    "title": "Men In Black",
+    "genre": "Action, Sci Fi",
+    "duration": "98"
   },
   {
-    "title": "Kimi No Nawa",
-    "genre": "Slice of Life"
-  },
-  {
-    "title": "Oppenheimer",
-    "genre": "Historical"
+    "id": 1764524780811,
+    "title": "The Godfather",
+    "genre": "Crime",
+    "duration": "175"
   }
 ]

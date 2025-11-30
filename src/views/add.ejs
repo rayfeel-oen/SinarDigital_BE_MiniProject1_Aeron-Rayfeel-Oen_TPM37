@@ -16,16 +16,8 @@
       <label>Genre:</label>
       <input type="text" name="genre" required /><br /><br />
 
-      <div class="form-group">
-        <label for="duration">Durasi Film</label>
-        <select name="duration" class="form-control" required>
-          <option value="30">± 30 menit (Short Movie)</option>
-          <option value="60">± 1 jam</option>
-          <option value="90">± 1,5 jam</option>
-          <option value="120">± 2 jam</option>
-          <option value="150">Lebih dari 2 jam</option>
-        </select>
-      </div>
+      <label>Durasi Film (dalam menit):</label>
+      <input type="number" name="duration" min="1" required /><br /><br />
 
       <button type="submit">Simpan</button>
     </form>

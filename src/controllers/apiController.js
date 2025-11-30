@@ -19,7 +19,14 @@ function saveData(data) {
 
 exports.renderHome = (req, res) => {
   const movies = loadData();
-  res.render("index", { movies });
+  const { filterTime } = req.query;
+
+  let filtered = movies;
+  if (filterTime) {
+    filtered = movies.filter((movie) => movie.duration == filterTime);
+  }
+
+  res.render("index", { movies: filtered });
 };
 
 exports.renderAdd = (req, res) => {
@@ -27,18 +34,17 @@ exports.renderAdd = (req, res) => {
 };
 
 exports.addMovie = (req, res) => {
-  const { title, genre, duration, description } = req.body;
+  const { title, genre, duration } = req.body;
 
-  const movies = getMovies();
+  const movies = loadData();
   movies.push({
     id: Date.now(),
     title,
     genre,
-    duration,
-    description,
+    duration
   });
 
-  saveMovies(movies);
+  saveData(movies);
   res.redirect("/");
 };
 
