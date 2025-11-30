@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rekomendasi Film</title>
+  </head>
+  <body>
+    <h1>Daftar Rekomendasi Film</h1>
+
+    <a href="/add">Tambah Film</a> | <a href="/about">About</a>
+    <hr />
+
+    <ul>
+      <% if (movies.length > 0) { %> <% movies.forEach(movie => { %>
+      <li><b><%= movie.title %></b> — <%= movie.genre %></li>
+      <% }) %> <% } else { %>
+      <li>Belum ada film.</li>
+      <% } %>
+    </ul>
+  </body>
+</html>
