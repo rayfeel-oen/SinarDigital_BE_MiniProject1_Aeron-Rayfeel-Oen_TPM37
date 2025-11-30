@@ -27,12 +27,18 @@ exports.renderAdd = (req, res) => {
 };
 
 exports.addMovie = (req, res) => {
-  const { title, genre } = req.body;
+  const { title, genre, duration, description } = req.body;
 
-  const movies = loadData();
-  movies.push({ title, genre });
+  const movies = getMovies();
+  movies.push({
+    id: Date.now(),
+    title,
+    genre,
+    duration,
+    description,
+  });
 
-  saveData(movies);
+  saveMovies(movies);
   res.redirect("/");
 };
 

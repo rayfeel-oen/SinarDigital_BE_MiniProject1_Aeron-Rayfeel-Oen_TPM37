@@ -17,3 +17,15 @@ Aplikasi ini dibuat menggunakan Express.js sebagai prototype web sederhana.
 - Tampilkan daftar film
 - Routing: Home, Add, About
 - API: GET /api/movies
+
+## Tema Unik
+Aplikasi ini tidak hanya merekomendasikan film berdasarkan genre, tetapi juga berdasarkan **lama waktu nonton**.
+
+User bisa memilih durasi film:
+- ± 30 menit (short movie)
+- ± 1 jam
+- ± 1,5 jam
+- ± 2 jam
+- > 2 jam
+
+Sehingga pengguna dapat menentukan film sesuai **waktu luang yang tersedia**, memberikan solusi personal bagi pengguna yang ingin hiburan tanpa mengganggu manajemen waktu.
